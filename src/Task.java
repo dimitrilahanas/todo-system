@@ -21,20 +21,22 @@ public class Task {
         taskName = input.nextLine();
     }
 
-    public void setTaskDate(int Year, int Month, int Day) {
+    public void setTaskDate() {
         taskDate = Calendar.getInstance();
         System.out.println("Enter the date it is due (number format):");
 
         System.out.print("Day: ");
-        Day = input.nextInt();
+        int Day = input.nextInt();
 
         System.out.print("Month: ");
-        Month = input.nextInt();
+        int Month = input.nextInt();
 
         System.out.print("Year: ");
-        Year = input.nextInt();
+        int Year = input.nextInt();
 
-        taskDate.set(Year, Month, Day);
+        taskDate.set(Year, Month - 1, Day);
+
+        input.nextLine();
     }
 
     public void setTaskDescription() {
@@ -50,12 +52,13 @@ public class Task {
             switch (status) {
             case "yes":
                 taskStatus = true;
-                break;
+                return;
             case "no":
                 taskStatus = false;
-                break;
+                return;
             default:
                 System.out.print("Invalid Input.");
+                setTaskStatus();
             }
         }
     }

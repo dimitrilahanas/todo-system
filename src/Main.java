@@ -1,5 +1,12 @@
 public class Main {
+
+    TaskList list = new TaskList();
+
+    public void runner() {
+        list.createTask();
+    }
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        Main program = new Main();
+        program.runner();
     }
 }
