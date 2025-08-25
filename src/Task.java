@@ -60,4 +60,20 @@ public class Task {
         }
     }
 
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public Calendar getTaskDate() {
+        return taskDate;
+    }
+
+    public String getTaskDescription() {
+        return taskDescription;
+    }
+
+    public boolean getTaskStatus() {
+        return taskStatus;
+    }
+
 }
