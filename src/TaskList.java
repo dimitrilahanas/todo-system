@@ -1,16 +1,21 @@
 import java.util.LinkedList;
 
 public class TaskList {
-    Task task = new Task(null, null, null, false);
     LinkedList<Task> tasks = new LinkedList<Task>();
 
     public void createTask() {
+        Task task = new Task(null, null, null, false);
         task.setTaskName();
         task.setTaskDate();
         task.setTaskDescription();
-        task.setTaskStatus();
 
         tasks.add(task);
         System.out.println("Task " + task.getTaskName() + " has been added!");
+    }
+
+    public void getList() {
+        for (int i = 0; i < tasks.size(); i++) {
+            System.out.println(tasks.get(i));
+        }
     }
 }

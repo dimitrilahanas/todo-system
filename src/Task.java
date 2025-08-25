@@ -79,4 +79,12 @@ public class Task {
         return taskStatus;
     }
 
+    @Override
+    public String toString() {
+        return "Task: " + taskName +
+             "\nDue Date: " + taskDate +
+             "\nTask Description: " + taskDescription +
+             "\nTask Status:" + taskStatus;
+    }
+
 }
